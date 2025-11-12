@@ -1,0 +1,8 @@
+{
+  "name": "mockoon-helper",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}

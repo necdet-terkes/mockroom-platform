@@ -1,0 +1,23 @@
+{
+  "name": "mockroom-platform",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:dummy-api": "pnpm --filter dummy-product-api dev",
+    "dev:dummy-ui": "pnpm --filter dummy-product-ui dev",
+    "dev:mock-api": "pnpm --filter mock-generator-api dev",
+    "dev:mock-ui": "pnpm --filter mock-generator-ui dev",
+    "dev:mockoon": "pnpm --filter mockoon-server start",
+    "dev:all": "concurrently \\\"pnpm dev:dummy-api\\\" \\\"pnpm dev:mock-api\\\" \\\"pnpm dev:mockoon\\\""
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2"
+  }
+}
