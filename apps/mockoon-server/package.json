@@ -1,0 +1,11 @@
+{
+  "name": "mockoon-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "mockoon-cli start --data ./environment.json --port 4005"
+  },
+  "dependencies": {
+    "@mockoon/cli": "^2.4.0"
+  }
+}
