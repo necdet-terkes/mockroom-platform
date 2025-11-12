@@ -1,11 +1,14 @@
 {
   "name": "mockoon-server",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
-    "start": "mockoon-cli start --data ./environment.json --port 4005"
+    "start": "mockoon-cli start -d ./environment.json -p 4005 -r",
+    "start:pm2": "pm2 start ecosystem.config.cjs",
+    "restart:pm2": "pm2 restart mockoon",
+    "stop:pm2": "pm2 delete mockoon || true",
+    "logs:pm2": "pm2 logs mockoon --lines 100"
   },
   "dependencies": {
-    "@mockoon/cli": "^2.4.0"
+    "@mockoon/cli": "^8.1.0"
   }
 }

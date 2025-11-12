@@ -38,5 +38,5 @@ app.get('/api/movies', async (req: Request, res: Response) => {
 })
 
 app.listen(PORT, () =>
-  console.log(`🎬 Dummy Product API proxy running at http://localhost:${PORT}/api/movies?q=Lord+Of+The+Rings`)
+  console.log(`🎬 Dummy Product API proxy running at http://localhost:${PORT}`)
 )

@@ -15,9 +15,10 @@
     "dev:all": "concurrently \\\"pnpm dev:dummy-api\\\" \\\"pnpm dev:mock-api\\\" \\\"pnpm dev:mockoon\\\""
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
     "concurrently": "^9.2.1",
     "eslint": "^9.39.1",
-    "prettier": "^3.6.2"
+    "pm2": "^6.0.13",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
   }
 }
