@@ -5,7 +5,6 @@ import cors from 'cors'
 const app = express()
 const PORT = 4001
 
-// ✅ CORS aktif et (React UI erişimi için)
 app.use(cors({
   origin: 'http://localhost:5173',
   methods: ['GET'],

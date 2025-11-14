@@ -4,7 +4,7 @@ module.exports = {
       name: "mockoon",
       cwd: __dirname,
       exec_mode: "fork",
-      interpreter: "none", // <-- EN KRİTİK NOKTA: Node ile yorumlama!
+      interpreter: "none", // Critical: execute the mockoon-cli binary directly, not through Node.
       script: "./node_modules/.bin/mockoon-cli",
       args: [
         "start",

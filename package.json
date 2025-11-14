@@ -6,15 +6,16 @@
     "apps/*",
     "packages/*"
   ],
-  "scripts": {
-    "dev:dummy-api": "pnpm --filter dummy-product-api dev",
-    "dev:dummy-ui-real": "pnpm --filter dummy-product-ui dev:real",
-    "dev:dummy-ui-mock": "pnpm --filter dummy-product-ui dev:mock",
-    "dev:mock-api": "pnpm --filter mock-generator-api dev",
-    "dev:mock-ui": "pnpm --filter mock-generator-ui dev",
-    "dev:mockoon": "pnpm --filter mockoon-server start",
-    "dev:all": "concurrently \\\"pnpm dev:dummy-api\\\" \\\"pnpm dev:mock-api\\\" \\\"pnpm dev:mockoon\\\""
-  },
+"scripts": {
+  "dev:dummy-api": "pnpm --filter dummy-product-api dev",
+  "dev:dummy-ui-real": "pnpm --filter dummy-product-ui dev:real",
+  "dev:dummy-ui-mock": "pnpm --filter dummy-product-ui dev:mock",
+  "dev:mock-api": "pnpm --filter mock-generator-api dev",
+  "dev:mock-ui": "pnpm --filter mock-generator-ui dev",
+  "dev:mockoon": "pnpm --filter mockoon-server start:pm2",
+
+  "dev:all:mock": "concurrently \"pnpm dev:dummy-api\" \"pnpm dev:mock-api\" \"pnpm dev:dummy-ui-mock\" \"pnpm dev:mockoon\" "
+},
   "devDependencies": {
     "concurrently": "^9.2.1",
     "eslint": "^9.39.1",
